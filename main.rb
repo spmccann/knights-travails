@@ -10,7 +10,7 @@ while keep_playing == true
   puts 'KNIGHTS TRAVAILS'
   puts "Enter 'test' to run 25 random knight coordinate positions"
   puts "Enter 'y' to input your own start/end coordianates:"
-  puts 'Any other enter input to exit'
+  puts 'Any other input to exit'
   answer = gets.downcase.chomp
   case answer
   when 'test'
@@ -28,9 +28,9 @@ while keep_playing == true
     end
     count = 0
   when 'y'
-    puts 'Please enter a starting x, y (0, 7):'
+    puts 'Please enter a starting x, y (0-7):'
     starting = gets.chomp.split(',').map(&:to_i)
-    puts 'Please enter a ending x, y (0, 7):'
+    puts 'Please enter an ending x, y (0-7):'
     ending = gets.chomp.split(',').map(&:to_i)
     knight = KnightMoves.new(starting, ending)
     knight.positions
